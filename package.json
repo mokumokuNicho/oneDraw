@@ -1,5 +1,6 @@
 {
   "devDependencies": {
+    "@hyperapp/router": "^0.7.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "parcel-bundler": "^1.9.7"
