@@ -444,43 +444,104 @@ function app(state, actions, view, container) {
 
 var _hyperapp = require("hyperapp");
 
-var state = {
-  count: 0
-};
+var state = {};
 
-var actions = {
-  down: function down() {
-    return function (state) {
-      return { count: state.count - 1 };
-    };
-  },
-  up: function up() {
-    return function (state) {
-      return { count: state.count + 1 };
-    };
-  }
-};
+var actions = {};
 
 var view = function view(state, actions) {
-  return (0, _hyperapp.h)(
-    "main",
-    null,
-    (0, _hyperapp.h)(
-      "h1",
-      null,
-      state.count
-    ),
-    (0, _hyperapp.h)(
-      "button",
-      { onclick: actions.down },
-      "-"
-    ),
-    (0, _hyperapp.h)(
-      "button",
-      { onclick: actions.up },
-      "+"
-    )
-  );
+    return (0, _hyperapp.h)(
+        "div",
+        { className: "ui container" },
+        (0, _hyperapp.h)(
+            "div",
+            { className: "ui three item menu" },
+            (0, _hyperapp.h)(
+                "a",
+                { className: "active item" },
+                "page1"
+            ),
+            (0, _hyperapp.h)(
+                "a",
+                { className: "item" },
+                "page2"
+            ),
+            (0, _hyperapp.h)(
+                "a",
+                { className: "item" },
+                "page3"
+            )
+        ),
+        (0, _hyperapp.h)(
+            "div",
+            { className: "ui three column grid" },
+            (0, _hyperapp.h)(
+                "div",
+                { className: "column" },
+                (0, _hyperapp.h)(
+                    "div",
+                    { className: "ui fluid card" },
+                    (0, _hyperapp.h)(
+                        "div",
+                        { className: "image" },
+                        (0, _hyperapp.h)("img", { src: "/images/sample1.jpg" })
+                    ),
+                    (0, _hyperapp.h)(
+                        "div",
+                        { className: "content" },
+                        (0, _hyperapp.h)(
+                            "a",
+                            { className: "header" },
+                            "Daniel Louise"
+                        )
+                    )
+                )
+            ),
+            (0, _hyperapp.h)(
+                "div",
+                { className: "column" },
+                (0, _hyperapp.h)(
+                    "div",
+                    { className: "ui fluid card" },
+                    (0, _hyperapp.h)(
+                        "div",
+                        { className: "image" },
+                        (0, _hyperapp.h)("img", { src: "/images/sample2.jpg" })
+                    ),
+                    (0, _hyperapp.h)(
+                        "div",
+                        { className: "content" },
+                        (0, _hyperapp.h)(
+                            "a",
+                            { className: "header" },
+                            "Helen Troy"
+                        )
+                    )
+                )
+            ),
+            (0, _hyperapp.h)(
+                "div",
+                { className: "column" },
+                (0, _hyperapp.h)(
+                    "div",
+                    { className: "ui fluid card" },
+                    (0, _hyperapp.h)(
+                        "div",
+                        { className: "image" },
+                        (0, _hyperapp.h)("img", { src: "/images/sample3.png" })
+                    ),
+                    (0, _hyperapp.h)(
+                        "div",
+                        { className: "content" },
+                        (0, _hyperapp.h)(
+                            "a",
+                            { className: "header" },
+                            "Elliot Fu"
+                        )
+                    )
+                )
+            )
+        )
+    );
 };
 
 var main = (0, _hyperapp.app)(state, actions, view, document.body);
@@ -513,7 +574,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '59423' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '56693' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 

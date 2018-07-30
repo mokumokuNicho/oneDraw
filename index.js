@@ -1,20 +1,53 @@
 import { h, app } from "hyperapp"
 
 const state = {
-  count: 0
 }
 
 const actions = {
-  down: () => state => ({ count: state.count - 1 }),
-  up: () => state => ({ count: state.count + 1 })
 }
 
 const view = (state, actions) => (
-  <main>
-    <h1>{state.count}</h1>
-    <button onclick={actions.down}>-</button>
-    <button onclick={actions.up}>+</button>
-  </main>
+    <div className={"ui container"}>
+        <div className="ui three item menu">
+            <a className="active item">page1</a>
+            <a className="item">page2</a>
+            <a className="item">page3</a>
+        </div>
+
+        <div className="ui three column grid">
+            <div className="column">
+                <div className="ui fluid card">
+                    <div className="image">
+                        <img src="/images/sample1.jpg" />
+                    </div>
+                    <div className="content">
+                        <a className="header">Daniel Louise</a>
+                    </div>
+                </div>
+            </div>
+            <div className="column">
+                <div className="ui fluid card">
+                    <div className="image">
+                        <img src="/images/sample2.jpg" />
+                    </div>
+                    <div className="content">
+                        <a className="header">Helen Troy</a>
+                    </div>
+                </div>
+            </div>
+            <div className="column">
+                <div className="ui fluid card">
+                    <div className="image">
+                        <img src="/images/sample3.png" />
+                    </div>
+                    <div className="content">
+                        <a className="header">Elliot Fu</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
 )
 
 const main = app(state, actions, view, document.body)
