@@ -1,10 +1,25 @@
 import { h, app } from "hyperapp"
+import Twitter from "twitter"
 
 const state = {
 }
 
 const actions = {
 }
+
+const consumer_key = 'MUxI500CBeRDCYBjIk0ZZnA0M'
+const consumer_secret = 'LAFhrrVhBvmQwiDBiIcbZVx23nppMFu1crh1tT0P3Yffkl7TAb'
+const access_token_key = '408473366-auVyzfDutX3S90B3XjyrYyUdupfOm6akXs1R4r9S'
+const access_token_secret = 'j1qnXMuFvOJ310kdWYye43kpUh2aV6P9yeULKb648Gmgp'
+
+const twitterClient = new Twitter({
+    consumer_key,
+    consumer_secret,
+    access_token_key,
+    access_token_secret
+})
+
+
 
 const view = (state, actions) => (
     <div className={"ui container"}>
